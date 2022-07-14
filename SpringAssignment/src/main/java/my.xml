@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans 
+xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:context="http://www.springframework.org/schema/context"
+xmlns:p="http://www.springframework.org/schema/p"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-3.0.xsd 
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context.xsd">
+
+	
+	
+	<context:annotation-config></context:annotation-config>
+<bean id="objq1" class="Assignment1.Q1" factory-method="getObjQ1"></bean>
+
+
+ 
+<bean id="ave" class="AssignmentQ2.numb">
+
+		<property name="num">
+			<list>
+				<value>38</value>
+				<value>29</value>
+				<value>44</value>
+				<value>98</value>
+				<value>99</value>
+			</list>
+		</property>
+	</bean>
+	
+	
+	<bean id="objint" class="AssignmentQ3.interest">
+<constructor-arg value="10" type="int"></constructor-arg>
+</bean>
+
+<!-- __________________Assignment 4_____________________ -->
+
+ <bean id ="d1"  class="AssignmentQ4.Department_Q4" >
+        <property name="did" value="1001"></property>
+        <property name="dname" value="Tester"></property>
+
+    </bean>
+    <bean id ="ebean4" class="AssignmentQ4.Q4"  autowire="byType">
+        <property name="eid" value="101"></property>
+        <property name="ename" value="Sumedha Pachghare"></property>
+        <property name="salary" value="35000"></property>
+        <property name="email" value="sumedha@gmail.com"></property>
+        <property name="department" ref="d1"></property>
+    </bean>  
+    
+    <bean id ="d2"  class="AssignmentQ4.Department_Q4" >
+        <property name="did" value="1002"></property>
+        <property name="dname" value="Developer"></property>
+
+    </bean>
+    <bean id ="e1bean4" class="AssignmentQ4.Q4"  autowire="byType">
+        <property name="eid" value="102"></property>
+        <property name="ename" value="Vaishali Pachghare"></property>
+        <property name="salary" value="40000"></property>
+        <property name="email" value="vaishali@gmail.com"></property>
+        <property name="department" ref="d2"></property>
+    </bean>  
+
+
+
+<bean id="max1" class="AssignmentQ5.maxnumber">
+
+		<property name="numbers">
+			<list>
+				<value>38</value>
+				<value>29</value>
+				<value>44</value>
+				<value>900</value>
+				<value>99</value>
+			</list>
+		</property>
+	</bean>
+	
+	
+	<bean id="vow1" class="AssignmentQ6.Vowel">
+		<property name="st">
+			<array>
+				<value>television</value>
+				<value>computer</value>
+				<value>fly</value>
+				<value>pen</value>
+				<value>speaker</value>
+				<value>sky</value>
+
+			</array>
+
+		</property>
+
+	</bean>
+	<!-- Assignment 7 -->
+	
+	<bean id="array1" class= "AssignmentQ7.Merge2">
+        <constructor-arg>
+            <array>
+                <value>30</value>
+                <value>40</value>
+                <value>70</value>
+                <value>10</value>
+                <value>80</value>
+            </array>
+        </constructor-arg>
+    </bean>
+    
+    <bean id="array2" class="AssignmentQ7.Merge">
+        <constructor-arg>
+            <array>
+                <value>20</value>
+                <value>50</value>
+                <value>90</value>
+                <value>60</value>
+            </array>
+        </constructor-arg>
+        <constructor-arg ref="array1"></constructor-arg>
+    </bean>
+
+
+
+	
+	
+	<bean id="itemlist" class="AssignmentQ8.ascending">
+
+		<property name="item">
+			<list>
+				<value>bag</value>
+				<value>TV</value>
+				<value>Mouse</value>
+				<value>Mobile</value>
+				<value>TV</value>
+			</list>
+		</property>
+	</bean>
+	
+	<!-- Assignment 9 -->
+	
+	<bean id="city1"
+		class="AssignmentQ9.distance">
+		<property name="fromCity" value="Pune"></property>
+		<property name="toCity" value="Nagpur"></property>
+		<property name="distance" value="774"></property>
+	</bean>
+
+	<bean id="city2"
+		class="AssignmentQ9.distance">
+		<property name="fromCity" value="pune"></property>
+		<property name="toCity" value="tuljapur"></property>
+		<property name="distance" value="350"></property>
+	</bean>
+
+	<bean id="city3" class="AssignmentQ9.distance">
+		<property name="fromCity" value="pune"></property>
+		<property name="toCity" value="wardha"></property>
+		<property name="distance" value="780"></property>
+	</bean>
+
+	<bean id="city4"
+		class="AssignmentQ9.distance">
+		<property name="fromCity" value="bhandara"></property>
+		<property name="toCity" value="pune"></property>
+		<property name="distance" value="865"></property>
+	</bean>
+	
+	<!-- Assignment 10 -->
+	
+	<bean id="stu11" class="AssignmentQ10.stud">
+		<constructor-arg>
+			<map>
+				<entry key="sumedha" value="420"></entry>
+				<entry key="vidya" value="470"></entry>
+				<entry key="vijay" value="388"></entry>
+				<entry key="vasundhara" value="299"></entry>
+				<entry key="urmila" value="477"></entry>
+				<entry key="hemant" value="300"></entry>
+			</map>
+		</constructor-arg>
+	</bean>
+	
+	 <bean id ="result" class="AssignmentQ11.Result" >
+    <constructor-arg value="76f"></constructor-arg>
+    <constructor-arg value="80f"></constructor-arg>
+    <constructor-arg value="85f"></constructor-arg>
+    <constructor-arg value="88f"></constructor-arg>
+    </bean>
+    <bean id ="student1" class="AssignmentQ11.Student" >
+    <constructor-arg value="sumedha"></constructor-arg>
+    <constructor-arg value="01"></constructor-arg>
+    <constructor-arg value="20/05/1997"></constructor-arg>
+    <constructor-arg value="12th"></constructor-arg>
+    <constructor-arg value="A"></constructor-arg>
+    <constructor-arg>
+    <ref bean="result"/>
+    </constructor-arg>
+        </bean>
+        
+        <bean id ="result1" class="AssignmentQ11.Result" >
+    <constructor-arg value="80f"></constructor-arg>
+    <constructor-arg value="82f"></constructor-arg>
+    <constructor-arg value="89f"></constructor-arg>
+    <constructor-arg value="95f"></constructor-arg>
+    </bean>
+    <bean id ="student2" class="AssignmentQ11.Student" >
+    <constructor-arg value="vidya"></constructor-arg>
+    <constructor-arg value="02"></constructor-arg>
+    <constructor-arg value="19/10/1996"></constructor-arg>
+    <constructor-arg value="10th"></constructor-arg>
+    <constructor-arg value="B"></constructor-arg>
+    <constructor-arg>
+    <ref bean="result1"/>
+    </constructor-arg>
+        </bean>
+        
+         <bean id ="result2" class="AssignmentQ11.Result" >
+    <constructor-arg value="90f"></constructor-arg>
+    <constructor-arg value="94f"></constructor-arg>
+    <constructor-arg value="89f"></constructor-arg>
+    <constructor-arg value="75f"></constructor-arg>
+    </bean>
+    <bean id ="student3" class="AssignmentQ11.Student" >
+    <constructor-arg value="vaishali"></constructor-arg>
+    <constructor-arg value="03"></constructor-arg>
+    <constructor-arg value="19/10/1998"></constructor-arg>
+    <constructor-arg value="First Year"></constructor-arg>
+    <constructor-arg value="a"></constructor-arg>
+    <constructor-arg>
+    <ref bean="result2"/>
+    </constructor-arg>
+        </bean>
+        
+          <bean id ="result3" class="AssignmentQ11.Result" >
+    <constructor-arg value="70f"></constructor-arg>
+    <constructor-arg value="82f"></constructor-arg>
+    <constructor-arg value="79f"></constructor-arg>
+    <constructor-arg value="79f"></constructor-arg>
+    </bean>
+    <bean id ="student4" class="AssignmentQ11.Student" >
+    <constructor-arg value="Aakansha"></constructor-arg>
+    <constructor-arg value="04"></constructor-arg>
+    <constructor-arg value="19/10/1994"></constructor-arg>
+    <constructor-arg value="10th"></constructor-arg>
+    <constructor-arg value="B"></constructor-arg>
+    <constructor-arg>
+    <ref bean="result3"/>
+    </constructor-arg>
+        </bean>
+        
+          <bean id ="result4" class="AssignmentQ11.Result" >
+    <constructor-arg value="88f"></constructor-arg>
+    <constructor-arg value="98f"></constructor-arg>
+    <constructor-arg value="78f"></constructor-arg>
+    <constructor-arg value="87f"></constructor-arg>
+    </bean>
+    <bean id ="student5" class="AssignmentQ11.Student" >
+    <constructor-arg value="Mrunal"></constructor-arg>
+    <constructor-arg value="05"></constructor-arg>
+    <constructor-arg value="19/10/1995"></constructor-arg>
+    <constructor-arg value="10th"></constructor-arg>
+    <constructor-arg value="B"></constructor-arg>
+    <constructor-arg>
+    <ref bean="result4"/>
+    </constructor-arg>
+        </bean>
+	
+	<!-- Assignment 12 -->
+	
+	
+    <bean  id="ibean12" class="AssignmentQ12.Employee">
+     <constructor-arg value="101" />
+     <constructor-arg value="Sumedha pachghare" />
+     <constructor-arg value="Full Stack Developer" />
+     <constructor-arg value="34000f" />
+    </bean>
+
+    <bean  id="ibean121" class="AssignmentQ12.Employee">
+     <constructor-arg value="102" />
+     <constructor-arg value="Vaishali pachghare" />
+     <constructor-arg value="UI Developer" />
+     <constructor-arg value="44000f" />
+    </bean>
+<!-- Assignment 13 -->
+
+<bean id="first" class="AssignmentQ13.showfactory" factory-method="getfirstObject"></bean>
+<bean id="second" class="AssignmentQ13.showfactory" factory-method="getsecondObject"></bean>
+<bean id="third" class="AssignmentQ13.showfactory" factory-method="getthirdObject"></bean>
+	
+	
+	
+ <bean id="circle" class="AssignmentQ14.ShapeFactory" factory-method="getCircleObject"></bean>
+<bean id="rectangle" class="AssignmentQ14.ShapeFactory" factory-method="getRectangleObject"></bean>
+<bean id="square" class="AssignmentQ14.ShapeFactory" factory-method="getSquareObject"></bean>
+	
+	 
+	
+<bean id="objitem" class="AssignmentQ15.item">
+<constructor-arg value="shirt"></constructor-arg>
+<constructor-arg value="11" type="int"></constructor-arg>
+<constructor-arg value="500" type="float"></constructor-arg>
+<constructor-arg value="10" type="float"></constructor-arg>
+</bean>
+<bean id="objcat" class="AssignmentQ15.category">
+<constructor-arg value="formal"></constructor-arg>
+<constructor-arg value="white"></constructor-arg>
+<constructor-arg>
+<ref bean="objitem"/>
+</constructor-arg></bean>
+<bean id="objcom" class="AssignmentQ15.customer">
+<constructor-arg value="sumedha pachghare"></constructor-arg>
+<constructor-arg value="41 HP1, pune"></constructor-arg>
+<constructor-arg>
+<ref bean="objcat"/>
+</constructor-arg>
+</bean> 
+	
+</beans>
